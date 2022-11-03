@@ -1,0 +1,6 @@
+const express = require('express');
+const router = express.Router();
+const { getMainpage } = require('../../../controllers/public/mainController')
+router.get("/", getMainpage)
+
+module.exports = router
