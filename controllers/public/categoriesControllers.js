@@ -10,7 +10,7 @@ const catchAsync = require('../../utils/catchAsync');
 exports.getAllCategories = catchAsync(async(req, res) => {
     const limit = req.query.limit || 20;
     const offset = req.query.offset;
-    const categories = await Categories.findAll({
+    const categories = await Categories.findAndCountAll({
         limit,
         offset,
         order: [

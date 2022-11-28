@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         third_number: DataTypes.STRING
     }, {
         sequelize,
-
+        tableName:"statistics",
         modelName: 'Statistics',
     });
     return Statistics;
